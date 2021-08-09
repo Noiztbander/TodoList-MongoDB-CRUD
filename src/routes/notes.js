@@ -8,8 +8,14 @@ router.get("/notes/add", (req, res, next) => {
 
 router.get("/notes", async (req, res, next) => {
   // moongose tiene la funcion lean(). Esto te obtiene un objeto Json (en vez de una orden moongose)
-  const notes = await note.find({}).lean();
+  const notes = await note.find({}).sort({ date: "desc" }).lean();
   res.render("notes/all-notes", { notes });
+});
+
+router.get("/notes/edit/:id", async (req, res, next) => {
+  // obtenemos los parametros de la URL con la req.params
+  const foundNote = await note.findById(req.params.id);
+  res.render("notes/edit-note", { foundNote });
 });
 
 // receive data
