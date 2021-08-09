@@ -1,17 +1,18 @@
 {
-  "name": "TodoList-MongoDB-CRUD",
+  "name": "todolist",
   "version": "1.0.0",
   "description": "Making a project for learning to make an app with Database, Login and a CRUD structure",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --trace-warnings src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Noiztbander/TodoList-MongoDB-CRUD.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Erick noiztbander",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Noiztbander/TodoList-MongoDB-CRUD/issues"
