@@ -11,6 +11,11 @@ router.get("/users/signup", (req, res, next) => {
   res.render("users/signup");
 });
 
+router.get("/users/logout", (req, res)=>{
+	req.logOut();
+	res.redirect("/");
+});
+
 /* Ponemos local dentro de authenticate, porque asi nos lo pide la documentacion. De esta manera ejecutamos a las funciones que estan dentro del archivo passport.js. Mirara de autentificar el usuario desde la base de datos y si lo logra, lo guardara en session */
 router.post("/users/signin", passport.authenticate("local", {
 	successRedirect: "/notes",

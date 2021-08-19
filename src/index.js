@@ -43,11 +43,12 @@ app.use(passport.session());
 app.use(flash());
 
 // Global Variables
-/* creamos estas variablos para que express entienda nuestro middleware flash() y ejecute funciones segun el tipo de mensage */
+/* creamos estas variables para que express entienda nuestro middleware flash() y ejecute funciones segun el tipo de mensage */
 app.use((req, res, next) => {
   res.locals.succes_msg = req.flash("succes_msg");
   res.locals.error_msg = req.flash("error_msg");
   res.locals.error = req.flash("error");
+	res.locals.userSession = req.user || null;
   next();
 });
 

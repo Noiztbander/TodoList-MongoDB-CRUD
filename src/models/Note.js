@@ -12,7 +12,8 @@ const noteSchema = new Schema({
 	date: {
 		type: Date,
 		default: Date.now
-	}
+	},
+  writedByUser: {type: String}
 });
 
 module.exports = model("Note", noteSchema);

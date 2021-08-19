@@ -1,0 +1,65 @@
+
+<header class="header">
+  <nav class="navbar-light">
+    <div
+      class="container-fluid d-flex justify-content-between align-items-center"
+    >
+      <div class="w-100 d-flex flex-row justify-content-between">
+        <ul class="navbar-nav d-flex flex-row gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row gap-3">
+          {{#if userSession}}
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                My Notes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/notes">All notes</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/notes/add">Add note</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/users/logout"
+              >Logout</a>
+            </li>
+          {{else}}
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/users/signin"
+              >Login</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/users/signup"
+              >Register</a>
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+      <div class="logo-container cursos-pointer text-decoration-none">
+        <img class="logo" src="/images/Logo_3.png" alt="logo" />
+      </div>
+    </div>
+  </nav>
+</header>
