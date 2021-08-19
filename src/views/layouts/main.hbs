@@ -12,22 +12,49 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-    {{!-- font-awesome --}}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-		{{!-- custom css --}}
-		<link rel="stylesheet" href="/css/main.css">
+    {{! font-awesome }}
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    {{! custom css }}
+    <link rel="stylesheet" href="/css/main.css" />
 
   </head>
-  <body>
-    <header>
-      Navegacion
+  <body class="body-grid">
+    <header class="header">
+      <nav class="navbar-light">
+        <div
+          class="container-fluid d-flex justify-content-between align-items-center"
+        >
+
+          <a href="/" class="text-decoration-none text-black">
+            <h1>C.R.U.D + M.V.C Project Example</h1>
+          </a>
+          <div class="logo-container cursos-pointer text-decoration-none">
+            <img class="logo" src="/images/Logo_3.png" alt="logo" />
+          </div>
+        </div>
+      </nav>
     </header>
-    <main class="container">
-      {{{body}}}
+
+    <main class="container p-4 h-100">
+      <div class="row">
+        {{!-- ccuando ponemos mayorque (>) delante de un nombre, en realidad estamos llamando a un partials. Desde el index inicial, en el engine, ya especificamos la ruta para econtrar dichos archivos partials --}}
+        {{> messages }}
+        {{> errors-messages }}
+        {{{body}}}
+      </div>
     </main>
-    <footer>
-      footer
+
+    <footer class="container-fluid footer text-white">
+      Work done By Erick Noiztbander
     </footer>
+
+    <div class="bg"></div>
+
     {{! Bootstrap-JS }}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

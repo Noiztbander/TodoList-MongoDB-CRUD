@@ -1,1 +1,50 @@
-<h1>Sign Up</h1>
+<section class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header">
+      Account register
+    </div>
+    <div class="card-body">
+      <form class="d-flex w-100 gap-3 flex-column" method="POST" action="/users/signup">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="userName"
+            placeholder="User name"
+						value="{{userName}}"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            name="userEmail"
+            placeholder="Email"
+						value="{{userEmail}}"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="userPassword"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="userConfirmPassword"
+            placeholder="Repeat password"
+          />
+        </div>
+        <div class="form-group d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-primary btn-block h-100">
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
