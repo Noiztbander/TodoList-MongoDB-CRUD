@@ -24,7 +24,7 @@ p {
   border-bottom: 1px solid rgb(179, 179, 179);
 }
 .footer {
-  width: 100vw;
+  position: bottom;
   z-index: 100;
   background-color: rgb(19, 19, 19);
   border-top: 1px solid rgb(185, 185, 185);
